@@ -33,8 +33,6 @@ public class DashBoard extends AppCompatActivity {
         fauth = FirebaseAuth.getInstance();
 
 
-
-
         //sign out button
         binding.logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,29 +44,6 @@ public class DashBoard extends AppCompatActivity {
         });
     }
 
-
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        MenuInflater inflater = getMenuInflater();
-//        inflater.inflate(R.menu.dashboard_menu,menu);
-//        return true;
-//    }
-
-
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        // Handle item selection
-//        switch (item.getItemId()) {
-//            case R.id.signout:
-//                signOut();
-//                return true;
-//            case R.id.settings:
-//                Toast.makeText(this,"setting",Toast.LENGTH_LONG).show();
-//                return true;
-//            default:
-//                return super.onOptionsItemSelected(item);
-//        }
-//    }
 
     // signout function
 
