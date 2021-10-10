@@ -40,9 +40,7 @@ public class DashBoard extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                fauth.signOut();
-                startActivity(new Intent(DashBoard.this, Signin.class));
-                finish();
+                signOut();
 
             }
         });
@@ -74,33 +72,33 @@ public class DashBoard extends AppCompatActivity {
 
     // signout function
 
-//    public void signOut(){
-//
-//        AlertDialog.Builder builder1 = new AlertDialog.Builder(DashBoard.this);
-//        builder1.setMessage("Do you really want to sign out");
-//        builder1.setCancelable(true);
-//
-//        builder1.setPositiveButton(
-//                "Yes",
-//                new DialogInterface.OnClickListener() {
-//                    public void onClick(DialogInterface dialog, int id) {
-//                        fauth.signOut();
-//                        startActivity(new Intent(DashBoard.this, Signin.class));
-//                        finish();
-//                    }
-//                });
-//
-//        builder1.setNegativeButton(
-//                "No",
-//                new DialogInterface.OnClickListener() {
-//                    public void onClick(DialogInterface dialog, int id) {
-//                        dialog.cancel();
-//                    }
-//                });
-//
-//        AlertDialog alert11 = builder1.create();
-//        alert11.show();
-//
-//
-//    }
+    public void signOut(){
+
+        AlertDialog.Builder builder1 = new AlertDialog.Builder(DashBoard.this);
+        builder1.setMessage("Do you really want to sign out");
+        builder1.setCancelable(true);
+
+        builder1.setPositiveButton(
+                "Yes",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        fauth.signOut();
+                        startActivity(new Intent(DashBoard.this, Signin.class));
+                        finish();
+                    }
+                });
+
+        builder1.setNegativeButton(
+                "No",
+                new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+
+        AlertDialog alert11 = builder1.create();
+        alert11.show();
+
+
+    }
 }

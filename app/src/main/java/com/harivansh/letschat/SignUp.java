@@ -22,14 +22,14 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.harivansh.letschat.databinding.ActivitySignUpBinding;
-import com.harivansh.letschat.model.User;
+
 
 public class SignUp extends AppCompatActivity {
 
     private ActivitySignUpBinding binding;
 
     private FirebaseAuth fauth;
-    FirebaseDatabase firebaseDatabase;
+
 
     private ProgressDialog progressDialog;
 
@@ -43,7 +43,7 @@ public class SignUp extends AppCompatActivity {
         // getting firebase instance
         fauth = FirebaseAuth.getInstance();
 
-        firebaseDatabase = FirebaseDatabase.getInstance();
+//        firebaseDatabase = FirebaseDatabase.getInstance();
 
 //        FirebaseDatabase database = FirebaseDatabase.getInstance();
 //        DatabaseReference myRef = database.getReference("message");
@@ -99,12 +99,12 @@ public class SignUp extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
                         if (task.isSuccessful()){
-                            User user = new User(user_name,user_email);
-
-                            String userId = task.getResult().getUser().getUid(); // getting the userid from auth firebase
-
-                            //Toast.makeText(SignUp.this,userId,Toast.LENGTH_LONG).show();
-                            firebaseDatabase.getReference().child("Users").child(userId).setValue(user); // storing user data
+//                            User user = new User(user_name,user_email);
+//
+//                            String userId = task.getResult().getUser().getUid(); // getting the userid from auth firebase
+//
+//                            //Toast.makeText(SignUp.this,userId,Toast.LENGTH_LONG).show();
+//                            firebaseDatabase.getReference().child("Users").child(userId).setValue(user); // storing user data
 
                             progressDialog.dismiss();
 
