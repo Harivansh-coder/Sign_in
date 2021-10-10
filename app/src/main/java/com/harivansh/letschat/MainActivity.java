@@ -1,12 +1,17 @@
-package com.example.letschat;
+package com.harivansh.letschat;
+
+import static android.content.ContentValues.TAG;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.harivansh.letschat.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // firebase instance
+        fauth = FirebaseAuth.getInstance();
+
         // Thread for loadscreen
         Thread LoadScreen = new Thread() {
 
@@ -24,19 +32,21 @@ public class MainActivity extends AppCompatActivity {
             public void run() {
                 try {
                     super.run();
-                    sleep(2000);  //Delay of 3 seconds
+                    sleep(1000);  //Delay of 1 seconds
                 } catch (Exception e) {
-
+                    Log.d(TAG,e.getMessage());
                 } finally {
 
-                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
+                    startActivity(new Intent(MainActivity.this, Signin.class));
+                    finish();
+
+                    FirebaseUser user = fauth.getCurrentUser();
                     if (user != null){
-                        Intent intent = new Intent(MainActivity.this, DashBoard.class); // need work here
-                        startActivity(intent);
+                        startActivity(new Intent(MainActivity.this, DashBoard.class));
                         finish();
                     }else{
-                        Intent intent = new Intent(MainActivity.this, LoginScreen.class);
-                        startActivity(intent);
+                        startActivity(new Intent(MainActivity.this, Signin.class));
                         finish();
                     }
 

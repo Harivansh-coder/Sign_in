@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "876299912630",
-    "project_id": "lets-chat-aaba4",
-    "storage_bucket": "lets-chat-aaba4.appspot.com"
+    "project_number": "220405998670",
+    "project_id": "lets-chat-78b79",
+    "storage_bucket": "lets-chat-78b79.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:876299912630:android:c89ddb0168de4c327c2d17",
+        "mobilesdk_app_id": "1:220405998670:android:84271ecb9f75a57bd38f1f",
         "android_client_info": {
-          "package_name": "com.example.letschat"
+          "package_name": "com.harivansh.letschat"
         }
       },
       "oauth_client": [
         {
-          "client_id": "876299912630-oas8epfufu0bhrg65nvdsn6tilb75gjs.apps.googleusercontent.com",
+          "client_id": "220405998670-3tj4k12r06cggp2dkuhvj5ko2dhf1ede.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBpjqZbLRfYaCJpZTDBcRxk0-ao1kZTNJ0"
+          "current_key": "AIzaSyDyrRMq3NKdX4pFlxbLkUD8P326lqoB_zY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "876299912630-oas8epfufu0bhrg65nvdsn6tilb75gjs.apps.googleusercontent.com",
+              "client_id": "220405998670-3tj4k12r06cggp2dkuhvj5ko2dhf1ede.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

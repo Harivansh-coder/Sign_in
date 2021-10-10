@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.letschat">
+    package="com.harivansh.letschat">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -10,14 +12,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LetsChat">
         <activity
+            android:name=".DashBoard"
+            android:exported="true" />
+        <activity
+            android:name=".SignUp"
+            android:exported="true" />
+        <activity
             android:name=".ForgotPassword"
             android:exported="true" />
         <activity
-            android:name=".DashBoard"
+            android:name=".Signin"
             android:exported="true" />
-        <activity android:name=".LoginScreen" />
-        <activity android:name=".SignupScreen" />
-        <activity android:name=".MainActivity">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

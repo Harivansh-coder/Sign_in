@@ -1,4 +1,4 @@
-package com.example.letschat;
+package com.harivansh.letschat;
 
 import org.junit.Test;
 
