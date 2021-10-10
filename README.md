@@ -6,10 +6,10 @@ An simple Registration Application for Android
 - Java (for coding)
 ## Screens
   1. Signin screen
-  <img src="ScreenShot/signIn.png" width="250" height = "500">
+  <img src="ScreenShot/signIn.png" width="250">
   2. Signup screen
-  <img src="ScreenShot/signUp.png" width="250" height = "500">
+  <img src="ScreenShot/signUp.png" width="250">
   3. Forgot password
-  <img src="ScreenShot/forgotPass.png" width="250" height = "500">
+  <img src="ScreenShot/forgotPass.png" width="250">
   4. Main screen (logout)
-  <img src="ScreenShot/mainScreen.png" width="250" height = "500">
+  <img src="ScreenShot/mainScreen.png" width="250">
