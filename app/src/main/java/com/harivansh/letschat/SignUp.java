@@ -43,15 +43,6 @@ public class SignUp extends AppCompatActivity {
         // getting firebase instance
         fauth = FirebaseAuth.getInstance();
 
-//        firebaseDatabase = FirebaseDatabase.getInstance();
-
-//        FirebaseDatabase database = FirebaseDatabase.getInstance();
-//        DatabaseReference myRef = database.getReference("message");
-//
-//        myRef.setValue("Hello, World!");
-
-
-
         // progress dialog
         progressDialog = new ProgressDialog(SignUp.this);
         progressDialog.setTitle("Creating Account");
@@ -67,16 +58,6 @@ public class SignUp extends AppCompatActivity {
 
             }
         });
-
-
-        // cancel button
-//        binding.cancelButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(SignUp.this,Signin.class));
-//                finish();
-//            }
-//        });
 
     }
 
@@ -99,12 +80,6 @@ public class SignUp extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
 
                         if (task.isSuccessful()){
-//                            User user = new User(user_name,user_email);
-//
-//                            String userId = task.getResult().getUser().getUid(); // getting the userid from auth firebase
-//
-//                            //Toast.makeText(SignUp.this,userId,Toast.LENGTH_LONG).show();
-//                            firebaseDatabase.getReference().child("Users").child(userId).setValue(user); // storing user data
 
                             progressDialog.dismiss();
 
@@ -112,9 +87,7 @@ public class SignUp extends AppCompatActivity {
 
 
                             Log.d("message", "signup success");
-                            Snackbar.make(binding.signupbutton,"account created successfully", BaseTransientBottomBar.LENGTH_LONG).show();
-//                            startActivity(new Intent(SignUp.this, Signin.class));
-//                            finish();
+                            Snackbar.make(binding.signupbutton,"account created successfully, Now sign in", BaseTransientBottomBar.LENGTH_LONG).show();
 
                         }else{
                             progressDialog.dismiss();
@@ -132,10 +105,6 @@ public class SignUp extends AppCompatActivity {
         }else{
             progressDialog.dismiss();
             Snackbar.make(binding.signupbutton,"either of the field cannot be empty", BaseTransientBottomBar.LENGTH_LONG).show();}
-
-
-
-
 
     }
 
@@ -165,7 +134,3 @@ public class SignUp extends AppCompatActivity {
         binding = null;
     }
 }
-
-
-
-
