@@ -1,10 +1,12 @@
 package com.harivansh.letschat
 
+import android.app.Application
 import android.content.ContentValues
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
@@ -15,6 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         // firebase instance
         fauth = FirebaseAuth.getInstance()
+
 
         // Thread for loadscreen
         val LoadScreen: Thread = object : Thread() {
